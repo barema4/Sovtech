@@ -8,3 +8,9 @@
 .movie-cards{
     padding: 6rem 6rem;
 }
+
+.card-details{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}

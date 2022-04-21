@@ -5,7 +5,7 @@ export default function WarDetails() {
   const { war, loading } = useSelector((state) => state.searchMovieReducer);
   //
   return (
-    <>
+    <div div className="card-details">
       {loading && <div class="spinner-border text-info" role="status" />}
       {Object.keys(war).length > 0 && (
         <div className="card m-2" style={{ width: "50rem" }}>
@@ -29,6 +29,6 @@ export default function WarDetails() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

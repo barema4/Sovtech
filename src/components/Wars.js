@@ -24,6 +24,7 @@ export default function Wars() {
               type="text"
               class="form-control"
               onChange={(e) => setSearchVale(e.target.value)}
+              placeholder="Please search your owen choice movie"
             />
           </div>
           <div className="col-md-2">
@@ -35,7 +36,7 @@ export default function Wars() {
                 setShowMessage(true);
               }}
             >
-              click
+              Search Movie
             </button>
           </div>
         </div>
