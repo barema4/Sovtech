@@ -1,16 +1,16 @@
-import { RETRIEVE_WAR, RETRIEVE_WARS } from "../actionTypes";
+import { RETRIEVE_WAR, RETRIEVE_MOVIES } from "../actionTypes";
 
 export const retrieveWarsInit = () => ({
-  type: RETRIEVE_WARS.INIT,
+  type: RETRIEVE_MOVIES.INIT,
 });
 
 export const retrieveWarsSuccess = (payload) => ({
-  type: RETRIEVE_WARS.SUCCESS,
+  type: RETRIEVE_MOVIES.SUCCESS,
   payload,
 });
 
 export const retrieveWarsError = (error) => ({
-  type: RETRIEVE_WARS.ERROR,
+  type: RETRIEVE_MOVIES.ERROR,
   error,
 });
 

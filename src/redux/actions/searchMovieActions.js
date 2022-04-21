@@ -6,12 +6,9 @@ import {
   retrieveWarInit,
   retrieveWarSuccess,
   retrieveWarError,
-} from "./actionCreators/recordingActionCreators";
+} from "./actionCreators/moviesActionCreators";
 
 const url = "https://swapi.dev/api/films";
-// process.env.NODE_ENV === "production"
-//   ? `https://wizrconnect.com/api`
-//   : `${process.env.REACT_APP_BASE_URL}/api`;
 
 export const getWars = (params) => async (dispatch) => {
   dispatch(retrieveWarsInit());
@@ -23,11 +20,13 @@ export const getWars = (params) => async (dispatch) => {
   }
 };
 
-export const getwar = (id) => async (dispatch) => {
+//
+
+export const getWar = (moveUrl) => async (dispatch) => {
   dispatch(retrieveWarInit());
   try {
-    let response = await axios.get(`${url}/video/${id}`);
-    dispatch(retrieveWarSuccess(response.data.video));
+    let response = await axios.get(`${moveUrl}`);
+    dispatch(retrieveWarSuccess(response.data));
   } catch (error) {
     dispatch(retrieveWarError(error));
   }

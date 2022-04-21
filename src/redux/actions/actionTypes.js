@@ -1,6 +1,6 @@
 import defineAction from "./utils";
 
-export const RETRIEVE_WARS = defineAction("RETRIEVE_WARS", [
+export const RETRIEVE_MOVIES = defineAction("RETRIEVE_MOVIES", [
   "INIT",
   "SUCCESS",
   "ERROR",

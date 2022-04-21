@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import recordingReducer from "./recordingReducer";
+import searchMovieReducer from "./searchMovieReducer";
 
 const rootReducer = combineReducers({
-  recordingReducer,
+  searchMovieReducer,
 });
 
 export default rootReducer;

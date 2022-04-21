@@ -1,27 +1,27 @@
-import { RETRIEVE_WARS, RETRIEVE_WAR } from "../actions/actionTypes";
+import { RETRIEVE_MOVIES, RETRIEVE_WAR } from "../actions/actionTypes";
 
 const initialState = {
   wars: [],
-  war: null,
+  war: {},
   error: null,
   loading: false,
 };
 
-const recordingReducer = (state = initialState, action) => {
+const searchMovieReducer = (state = initialState, action) => {
   switch (action.type) {
-    case RETRIEVE_WARS.INIT:
+    case RETRIEVE_MOVIES.INIT:
       return {
         ...state,
         loading: true,
       };
-    case RETRIEVE_WARS.SUCCESS:
+    case RETRIEVE_MOVIES.SUCCESS:
       return {
         ...state,
         loading: false,
         wars: action.payload,
       };
 
-    case RETRIEVE_WARS.ERROR:
+    case RETRIEVE_MOVIES.ERROR:
       return {
         ...state,
         loading: false,
@@ -47,8 +47,8 @@ const recordingReducer = (state = initialState, action) => {
       };
 
     default:
-      return initialState;
+      return state;
   }
 };
 
-export default recordingReducer;
+export default searchMovieReducer;
