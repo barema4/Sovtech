@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getWars, getWar } from "../redux/actions/searchMovieActions";
+import { getWars } from "../redux/actions/searchMovieActions";
 import "../sytles/startwar.css";
 
 export default function Wars() {
