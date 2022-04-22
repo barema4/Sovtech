@@ -57,7 +57,7 @@ input[type=text]{
 
 .loading{
     display: flex;
-    align-content: center;
+    justify-content: center;
 }
 
 .no-search{
@@ -71,4 +71,10 @@ input[type=text]{
 .text-data{
     font-size: 16px;
     text-align: justify;
+}
+
+.data-list{
+    font-size: 12px;
+    text-align: justify;
+    color: black
 }

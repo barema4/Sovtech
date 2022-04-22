@@ -45,11 +45,14 @@ export default function Wars() {
             const splitArray = item.url.split("/");
             const id = splitArray[splitArray.length - 2];
             return (
-              <Link to={`/Star-wars/move-details/${id}`}>
+              <Link
+                to={`/Star-wars/move-details/${id}`}
+                style={{ textDecoration: "none" }}
+              >
                 <div className="card-details" key={item.title}>
                   <div className="">
-                    <h5 className="">{item.title}</h5>
-                    <h6 className="">{item.producer}</h6>
+                    <h5 className="data-list">{item.title}</h5>
+                    <h6 className="data-list">{item.producer}</h6>
                   </div>
                 </div>
               </Link>
