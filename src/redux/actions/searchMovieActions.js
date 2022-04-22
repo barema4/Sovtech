@@ -22,10 +22,10 @@ export const getWars = (params) => async (dispatch) => {
 
 //
 
-export const getWar = (moveUrl) => async (dispatch) => {
+export const getWar = (id) => async (dispatch) => {
   dispatch(retrieveWarInit());
   try {
-    let response = await axios.get(`${moveUrl}`);
+    let response = await axios.get(`${url}/${id}`);
     dispatch(retrieveWarSuccess(response.data));
   } catch (error) {
     dispatch(retrieveWarError(error));

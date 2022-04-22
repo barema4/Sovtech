@@ -10,27 +10,24 @@ export default function Wars() {
   const [showMessage, setShowMessage] = useState(false);
   const { wars, loading } = useSelector((state) => state.searchMovieReducer);
 
-  const getMovieDetail = (url) => {
-    dispatch(getWar(url));
-  };
-
   return (
     <>
       <div>
-        <div className="container row mt-3 ml-auto">
-          <div className="col-md-4">Welcome Star War API</div>
-          <div className="col-md-6">
+        <div className="container-section">
+          <div className="section1">Welcome Star War API</div>
+          <div className="section">
             <input
               type="text"
-              class="form-control"
+              class=""
               onChange={(e) => setSearchVale(e.target.value)}
               placeholder="Please search your owen choice movie"
             />
           </div>
-          <div className="col-md-2">
+          <div className="section2">
             <button
               type="button"
-              class="btn btn-primary"
+              class="search-btn"
+              disabled={searchVale.length === 0}
               onClick={() => {
                 dispatch(getWars(searchVale));
                 setShowMessage(true);
@@ -42,29 +39,26 @@ export default function Wars() {
         </div>
 
         <br />
-        {loading && <div class="spinner-border text-info" role="status" />}
+        {loading && <div className="loading">...Loading data</div>}
         <div className="move-list">
           {wars.map((item) => {
+            const splitArray = item.url.split("/");
+            const id = splitArray[splitArray.length - 2];
             return (
-              <Link to={`/Star-wars/move-details`}>
-                <div
-                  className="card m-2 "
-                  key={item.title}
-                  style={{ width: "25rem" }}
-                  onClick={() => getMovieDetail(item.url)}
-                >
-                  <div className="card-body movie-cards">
-                    <h5 className="card-title">{item.title}</h5>
-                    <h6 className="card-subtitle mb-2 text-muted">
-                      {item.producer}
-                    </h6>
+              <Link to={`/Star-wars/move-details/${id}`}>
+                <div className="card-details" key={item.title}>
+                  <div className="">
+                    <h5 className="">{item.title}</h5>
+                    <h6 className="">{item.producer}</h6>
                   </div>
                 </div>
               </Link>
             );
           })}
           {wars.length === 0 && showMessage && !loading && (
-            <p>No available movies that corresponds your search</p>
+            <p style={{ display: "flex", justifyContent: "center" }}>
+              No available movies that corresponds your search
+            </p>
           )}
         </div>
       </div>

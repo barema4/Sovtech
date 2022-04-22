@@ -11,7 +11,7 @@ export const pages = [
         element: Wars,
       },
       {
-        path: "/move-details",
+        path: "/move-details/:id",
         exact: true,
         element: WarDetails,
       },

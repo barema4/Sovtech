@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 15px;
-    /* margin: 20px; */
 }
 
 .movie-cards{
@@ -13,4 +12,55 @@
     display: flex;
     justify-content: center;
     margin-top: 70px;
+}
+
+.container-section{
+    display: flex;
+    justify-content: center;
+
+}
+.section1{
+    margin-top: 18px;
+    margin-right: 10px;
+    padding: 22px;
+
+}
+.search-btn{
+    padding: 8px;
+}
+
+.section{
+    margin-right: 10px;
+    padding: 20px;
+}
+
+.section2{
+    margin-top: 12px;
+    padding: 22px;
+
+}
+
+input[type=text]{
+    padding:10px;
+    margin:10px 0;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 30rem;
+}
+
+.card-details{
+    border:1px solid gray;
+    padding: 50px;
+    border-radius: 10px;
+    background: aliceblue;
+}
+
+.loading{
+    display: flex;
+    align-content: center;
+}
+
+.no-search{
+    display: flex;
+    justify-content: center;
 }
